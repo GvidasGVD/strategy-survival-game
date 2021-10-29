@@ -1,0 +1,44 @@
+.gameModal {
+  background-color: blanchedalmond;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  
+
+  .gameContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    .leftGameSide {
+      width: 30%;
+      padding: 10px;
+
+      .leftUpperBox {
+        height: 300px;
+        border: solid 2px brown;
+        margin-bottom: 10px;
+        border-radius: $averageBorderRadius;
+        overflow: overlay;
+        .tutorialBoxTextField {
+          padding: 5px;
+          user-select: none;
+          font: {
+            family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+              "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
+            weight: 500;
+          }
+        }
+      }
+    }
+    .rightGameSide {
+      width: 68%;
+      border: solid 3px brown;
+      margin-top: 10px;
+      border-radius: $averageBorderRadius;
+      height: 410px;
+    }
+  }
+}

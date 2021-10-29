@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: rgba(110, 69, 22, 0.644);
+
+}
+
+#modal-root {
+    position: absolute;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+
+#backdrop-root {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+#root {
+    height: 100%;
+}
+.mainPage {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .containerModal {
+        min-height: 550px;
+        min-width: 700px;
+        max-width: 700px;
+        max-height: 550px;
+        width: 700px;
+        height: 550px;
+        margin: auto;
+        border-radius: $mainBorder;
+    }
+}
+

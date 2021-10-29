@@ -1,0 +1,34 @@
+.building-square {
+    height: 66px;
+    width: 66px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+  .building-square__inner {
+      height: 65px;
+      width: 65px;
+      border: 1px solid #31313160;
+      border-radius: 12px;
+      background-color: #ebead5;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .building-square__inner:hover {
+      cursor: pointer;
+      background-color: #aaa64f;
+  }
+
+  .building-square__inner.selected-field {
+    background-color: #cfcfc5;
+    border: 2px solid #fff317ee;
+    box-shadow: 0 0 5px yellow;
+  }
+      
+}
+  

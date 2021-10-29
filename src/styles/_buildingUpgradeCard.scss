@@ -1,0 +1,64 @@
+.building-card {
+    background-color: rgba(116, 66, 5, 0.363);
+    border-radius: 5px;
+    min-height: 120px;
+    margin: 5px;
+    box-shadow: 2px 2px 3px 1px brown;
+}
+
+.building-title {
+    font-weight: 600;
+    color: rgb(248, 242, 242);
+    background-color: rgba(43, 25, 3, 0.699);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 2px 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.building-level-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(243, 240, 42);
+    background-color: rgba(43, 25, 3, 0.596);
+    border-radius: 3px;
+    padding: 2px 0;
+}
+
+.building-info-text {
+    font-size: 12px;
+    color: rgb(233, 233, 233);
+    background-color: rgba(70, 70, 70, 0.801);
+    border-radius: 2px;
+    padding: 3px;
+    margin: 5px;
+
+}
+
+.train-warriors-number {
+    font-size: 16px;
+    color:white;
+    background-color: rgba(70, 70, 70, 0.801);
+    padding: 0 10px;
+    border-radius: 3px;
+    width: 60px;
+    text-align: center;
+    border: 3px solid rgba(148, 88, 19, 0.808);
+}
+
+.upgrade-building-box {
+    background-color: rgb(105, 50, 19);
+    margin: 0 5px;
+    border-radius: 5px;
+    padding: 3px;
+    box-shadow: 2px 2px 3px 1px brown;
+
+    span {
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 0 1px;
+    }
+}

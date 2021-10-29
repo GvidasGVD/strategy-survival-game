@@ -1,0 +1,73 @@
+.game-info-card {
+  .game-info-card-header {
+    font-weight: 500;
+    font-size: 26px;
+    font-style: italic;
+    color: black;
+    background-color: rgb(206, 171, 124);
+    padding: 5px 30px;
+    border-bottom: 3px solid brown;
+    text-align: center;
+  }
+  h4 {
+    line-height: 1.5;
+  }
+
+  .game-info-card__production {
+    width: 100%;
+  }
+
+  .game-info-card__battle-losses,
+  .game-info-card__production-title {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    background-color: rgb(49, 35, 16);
+    border-bottom: 1px solid white;
+  }
+}
+
+.icon-float{
+  position: absolute;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.icon-float__won-battle {
+  left: -37%;
+  top: 40%;
+
+  color: green;
+  animation-name: icon_color_change__won-battle;
+
+}
+
+.icon-float__lost-battle {
+  left: 37%;
+  top: 40%;
+  color: red;
+  animation-name: icon_color_change__lost-battle;
+}
+
+.icon-float__lost-game {
+  left: 0%;
+  top: 50%;
+  animation-name: icon_color_change__lost-battle;
+}
+
+.icon-float__won-game {
+  left: 0%;
+  top: 60%;
+  animation-name: icon_color_change__won-battle;
+}
+
+@keyframes icon_color_change__won-battle {
+  from {color: green;}
+  to {color: yellow;}
+}
+
+@keyframes icon_color_change__lost-battle {
+  from {color: red;}
+  to {color: yellow;}
+}
