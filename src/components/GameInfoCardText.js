@@ -115,7 +115,7 @@ const GameInfoCardText = (props) => {
         {props.type.secondText && (
           <div className="px-5 pt-3">{props.type.secondText}</div>
         )}
-        <div className="px-5">{props.type.thirdText}</div>
+        <div className="px-5 pt-3">{props.type.thirdText}</div>
         {icons}
         {productionInfo}
         {wonBattle}
