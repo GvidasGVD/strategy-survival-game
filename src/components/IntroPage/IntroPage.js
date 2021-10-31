@@ -39,7 +39,7 @@ const IntroPage = ({ playersName, onGotIt }) => {
   return (
     <div className="containerModal tutorialModal">
       <div className="introImage">
-        <img src="https://github.com/GvidasGVD/strategy-survival-game/blob/gh-pages/images/introPersonImg.png" alt="Ancient person drawing" />
+        <img src="https://github.com/GvidasGVD/strategy-survival-game/blob/gh-pages/images/introPersonImg.PNG" alt="Ancient person drawing" />
         {/* <img alt="Ancient person drawing" /> */}
       </div>
       <div className="introTextBox d-flex justify-content-end align-content-between flex-wrap p-4">
