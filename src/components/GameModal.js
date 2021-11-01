@@ -75,7 +75,7 @@ const GameModal = (props) => {
   const lumberProvided = 5;
   const stoneProvided = 5;
   const ironProvided = 5;
-  const defaultTimeSpeed = 4000;
+  const defaultTimeSpeed = 40000;
 
   const [strengthOfEnemy, setStrengthOfEnemy] = useState(50);
   const [daysTillAttack, setDaysTillAttack] = useState(50);
@@ -624,13 +624,20 @@ const GameModal = (props) => {
   const [assets, setAssets] = useState([
     {
       // happinessOfVillagers: 80,
-      villagers: 10,
+      // villagers: 10,
+      // knights: 0,
+      // archers: 0,
+      // lumber: 100,
+      // stone: 0,
+      // iron: 0,
+      // gold: 1000,
+      villagers: 10000,
       knights: 0,
       archers: 0,
-      lumber: 100,
-      stone: 0,
-      iron: 0,
-      gold: 1000,
+      lumber: 10000,
+      stone: 10000,
+      iron: 10000,
+      gold: 900000,
     },
   ]);
   //#region Start

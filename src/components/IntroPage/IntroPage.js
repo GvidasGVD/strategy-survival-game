@@ -11,6 +11,8 @@ const IntroPage = ({ playersName, onGotIt }) => {
   const [state, setState] = useState(0);
   const [existsPreviousText, setExistancePrevText] = useState(false);
   const [existsNextText, setExistanceNextText] = useState(true);
+  const [showPreviousBtn, setShowPreviousBtn] = useState(false);
+  const [showNextBtn, setShowNextBtn] = useState(true);
 
   function toggleIntroText(val) {
     if (state <= 0 && val < 0) {
@@ -21,12 +23,24 @@ const IntroPage = ({ playersName, onGotIt }) => {
       setExistanceNextText(false);
       return;
     }
-    state + val === 0
-      ? setExistancePrevText(false)
-      : setExistancePrevText(true);
-    state + val === 2
-      ? setExistanceNextText(false)
-      : setExistanceNextText(true);
+    if(state + val === 0) {
+      setExistancePrevText(false);
+      setShowPreviousBtn(false);
+      setShowNextBtn(true);
+    } else {
+      setExistancePrevText(true);
+      setShowPreviousBtn(true);
+      setShowNextBtn(true);
+    }
+
+    if(state + val === 2) {
+      setExistanceNextText(false);
+      setShowPreviousBtn(true);
+      setShowNextBtn(false);
+    } else {
+      setExistanceNextText(true);
+    }
+
     setState(state + val);
     setIntroText(introTexts[state + val]);
   }
@@ -106,20 +120,21 @@ const IntroPage = ({ playersName, onGotIt }) => {
           </div>
         </div>
         <div className="m-5">
-          <button
+          {showPreviousBtn && <button
             className="introBtnPrevious btn btn-dark btn-sm mr-1"
             onClick={() => toggleIntroText(-1)}
             disabled={!existsPreviousText}
           >
             Previous
-          </button>
-          <button
+          </button>}
+          {showNextBtn && <button
             className="introBtnNext btn btn-dark btn-sm mx-1"
             onClick={() => toggleIntroText(+1)}
             disabled={!existsNextText}
           >
             Next
-          </button>
+          </button>}
+          
           <button className="btn btn-dark btn-sm ml-1 mt-0" onClick={onGotIt}>
             {" "}
             Got it!{" "}

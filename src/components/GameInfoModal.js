@@ -82,7 +82,7 @@ const ModalOverlay = (props) => {
               Collect <b>1 million </b> gold!{" "}
             </h4>
             <span className="w-100 text-center">
-              Till victory:
+              Till victory: &nbsp;
               <GiTwoCoins size="0.8em" color="rgb(242, 232, 36)" />
               <GiTwoCoins size="1.5em" color="rgb(255, 243, 0)" />
               <GiTwoCoins size="1.0em" color="rgb(235, 200, 45)" />{" "}
@@ -96,7 +96,7 @@ const ModalOverlay = (props) => {
           <div className="w-100 d-flex flex-wrap justify-content-center mt-2">
             <h4>... or Train 10,000 Warriors!</h4>
             <span className="w-100 text-center pt-2">
-              Till victory: <GiSwordman size="1.5em" /> <GiBowman />{" "}
+              Till victory: &nbsp; <GiSwordman size="1.5em" /> <GiBowman />{" "}
               {warriorstillWin}
             </span>
           </div>
@@ -180,7 +180,7 @@ const ModalOverlay = (props) => {
                       Collect <b>1 million </b> gold!{" "}
                     </h4>
                     <span className="w-100 text-center">
-                      Till victory:
+                      Till victory: &nbsp;
                       <GiTwoCoins size="0.8em" color="rgb(242, 232, 36)" />
                       <GiTwoCoins size="1.5em" color="rgb(255, 243, 0)" />
                       <GiTwoCoins size="1.0em" color="rgb(235, 200, 45)" />{" "}

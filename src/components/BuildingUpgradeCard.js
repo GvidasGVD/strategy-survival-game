@@ -173,27 +173,28 @@ const BuildingUpgradeCard = (props) => {
                 <div className="d-flex flex-nowrap align-content-center text-right">
                   {" "}
                   <button
-                    className="btn btn-dark btn-xs m-1"
+                    className="btn btn-dark btn-xs ml-1 my-2"
                     onClick={decreaseNo}
                   >
                     -
                   </button>
+                  <div className="d-flex flex-wrap align-content-center justify-content-center train-warriors-number mx-1">
+                  {number}
+                </div>
                   <button
-                    className="btn btn-dark btn-xs my-1"
+                    className="btn btn-dark btn-xs my-2"
                     onClick={increaseNr}
                   >
                     +
                   </button>
                   <button
-                    className="btn btn-dark btn-xs my-1 ml-1"
+                    className="btn btn-dark btn-xs my-2 ml-1"
                     onClick={setMaxNr}
                   >
                     max
                   </button>
                 </div>
-                <div className="d-flex flex-wrap align-content-center justify-content-center train-warriors-number ml-2">
-                  {number}
-                </div>
+
               </div>
 
               <div className="d-flex flex-wrap justify-content-center">
