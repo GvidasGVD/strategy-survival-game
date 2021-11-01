@@ -75,7 +75,7 @@ const GameModal = (props) => {
   const lumberProvided = 5;
   const stoneProvided = 5;
   const ironProvided = 5;
-  const defaultTimeSpeed = 40000;
+  const defaultTimeSpeed = 4000;
 
   const [strengthOfEnemy, setStrengthOfEnemy] = useState(50);
   const [daysTillAttack, setDaysTillAttack] = useState(50);
