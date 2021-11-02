@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "https://gvidasgvd.github.io/strategy-survival-game/images/gameAdImage.png",
   "background_color": "#ffffff"
 }
