@@ -1271,8 +1271,8 @@ const GameModal = (props) => {
             onCloseModal={onCloseGameInfoModal}
             productionPerDay={productionPerDay}
             gamePlay={gamePlay}
-            onPlayAgain={reload}
-            onExitGame={props.onExitGame}
+            onPlayAgain={props.onExitGame}
+            onExitGame={reload}
             daysTillAttack={daysTillAttack}
             strengthOfEnemy={strengthOfEnemy}
             proceedGame={proceedWithTheGame}

@@ -193,7 +193,7 @@ const ModalOverlay = (props) => {
           : infoType;
       })
     );
-  }, [props.gold, props.daysTillAttack, gameInfoTypes, goldTillWin]);
+  }, [props.gold, props.daysTillAttack, goldTillWin]);
   const filteredgameInfo = gameInfoTypes.filter((infoType) => {
     return infoType.id === props.selectedInfoTypeId;
   });
