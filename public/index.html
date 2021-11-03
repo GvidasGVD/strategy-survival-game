@@ -55,6 +55,18 @@
         }
       }
 
+      @media only screen and (orientation: portrait) and (max-width: 499px) {
+        #root {
+          display: none;
+        }
+        #turn-device {
+          display: block;
+        }
+        #screen-too-small {
+          display: none;
+        }
+      }
+
       @media only screen and (orientation: landscape) and (min-width: 501px) {
         #root {
           display: block;
