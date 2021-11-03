@@ -119,7 +119,7 @@ const IntroPage = ({ playersName, onGotIt }) => {
             ) : null}
           </div>
         </div>
-        <div className="m-5">
+        <div className="mt-auto">
           {showPreviousBtn && <button
             className="introBtnPrevious btn btn-dark btn-sm mr-1"
             onClick={() => toggleIntroText(-1)}

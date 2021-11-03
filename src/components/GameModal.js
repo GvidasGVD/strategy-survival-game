@@ -1388,12 +1388,12 @@ const GameModal = (props) => {
                 <BiStats size="1.5em" />
               </button>
             </div>
-            <div className="">
+            <div className="d-flex justify-content-center align-content-end exit-game-btn-box">
               <button
-                className="btn btn-danger btn-sm m-1 mt-5"
+                className="btn btn-danger btn-sm"
                 onClick={props.onShowExitModal}
               >
-                Exit
+                Exit game
               </button>
             </div>
           </div>
@@ -1404,7 +1404,7 @@ const GameModal = (props) => {
             onClickEventHandler={onClickEventHandler}
           />
         </div>
-        <div className="w-100">
+        <div className="w-100 strategy-game-author-text">
           <p className="text-center">
             Strategy Game created by Gvidas Pilelis ©2021
           </p>

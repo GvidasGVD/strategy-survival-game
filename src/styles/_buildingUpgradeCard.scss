@@ -1,3 +1,10 @@
+.left-upper-container {
+    height: 300px;
+    border: solid 2px brown;
+    margin-bottom: 10px;
+    border-radius: $averageBorderRadius;
+    overflow: overlay;
+}
 .building-card {
     background-color: rgba(116, 66, 5, 0.363);
     border-radius: 5px;
@@ -61,5 +68,11 @@
         align-items: center;
         color: white;
         padding: 0 1px;
+    }
+}
+
+@media only screen and (max-width: 700px), (max-height: 550px) {
+    .left-upper-container {
+        height: 60%;
     }
 }

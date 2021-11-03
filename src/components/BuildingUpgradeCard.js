@@ -140,9 +140,9 @@ const BuildingUpgradeCard = (props) => {
   }, [props.buildingArea, props.selectedBuildingType, props.building.group]);
 
   return (
-    <div>
+    <div className="left-upper-container">
       <ReactTooltip place="bottom" delayUpdate={1000} />
-      <div className="leftUpperBox d-flex flex-wrap w-100 p-2 justify-content-center">
+      <div className="d-flex flex-wrap w-100 h-100 p-2 justify-content-center">
         <div className="d-flex flex-wrap align-items-start building-card">
           <span className="building-title">{props.buildingTitle}</span>
           {!displayUpgradeBtn && (

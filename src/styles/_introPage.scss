@@ -40,6 +40,10 @@
     background-color: rgba(56, 56, 56, 0.562);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+
+    h3 {
+        font-size: 24px;
+    }
   }
 
   .introTextField {
@@ -116,6 +120,11 @@
     .introTextBox {
       min-width: 65%;
       max-width: 65%;
+      height: 100%;
+
+      h3 {
+          font-size: 14px;
+      }
     }
 
     .introTextField {
