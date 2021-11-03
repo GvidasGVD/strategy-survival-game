@@ -1,105 +1,134 @@
 #turn-device,
 #screen-too-small {
-    font-size: 16px;
-    height: 100%;
-    width: 100%;
-    color: white;
-    text-align: center;
-    padding-top: 50px;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .tutorialModal {
-    background: grey url('https://gvidasgvd.github.io/strategy-survival-game/images/introBckImg.JPG') no-repeat;
-    background-size: cover;
-    color: $thm-warmWhite;
+  background: grey
+    url("https://gvidasgvd.github.io/strategy-survival-game/images/introBckImg.JPG")
+    no-repeat;
+  background-size: cover;
+  color: $thm-warmWhite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .introImage {
+    min-width: 100px;
+    max-width: 100px;
+    margin: 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-end;
 
-    .introImage {
-        min-width: 100px;
-        max-width: 100px;
-        margin: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+    img {
+      width: 120px;
+      height: 200px;
+      margin-bottom: 80px;
+    }
+  }
 
-        img{
-            width: 120px;
-            height: 200px;
-            margin-bottom: 80px;
-        }
-    }
-    
-    .introTextBox {
-        color: white;
-        min-width: 65%;
-        max-width: 65%;
-        background-color: rgba(56, 56, 56, 0.562);
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
+  .introTextBox {
+    color: white;
+    min-width: 65%;
+    max-width: 65%;
+    background-color: rgba(56, 56, 56, 0.562);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 
-    .introTextField {
-        color: white;
-        font-size: 16px;
-    }
+  .introTextField {
+    color: white;
+    font-size: 16px;
+  }
 }
 
 .white-text {
-    color: white;
+  color: white;
 }
 
-.linkedin-link:hover{
-    fill:rgb(8, 13, 77);
+.linkedin-link:hover {
+  fill: rgb(8, 13, 77);
 }
-.GP-link-box{
-    width: 45px;
-    height: 45px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 4px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.GP-link-box {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .GP-link {
-        color:bisque;
-        font-size: 24px;
-        font-weight: 600;
-    
-        &:link{
-            text-decoration: none;
-        }
-        &:visited{
-            text-decoration: none;
-            color:bisque;
-        }
-        &:hover{
-            text-decoration: none;
-            color:rgb(255, 220, 23);
-        }
-    
-        
+  .GP-link {
+    color: bisque;
+    font-size: 24px;
+    font-weight: 600;
+
+    &:link {
+      text-decoration: none;
     }
-
+    &:visited {
+      text-decoration: none;
+      color: bisque;
+    }
+    &:hover {
+      text-decoration: none;
+      color: rgb(255, 220, 23);
+    }
+  }
 }
 
 .introBtnPrevious:focus,
-.introBtnNext:focus
-{
-    color: white;
+.introBtnNext:focus {
+  color: white;
 }
 
-.icons-links{
+.icons-links {
+  color: white;
+  width: 100%;
+  &:visited {
+    text-decoration: none;
     color: white;
-    width: 100%;
-    &:visited{
-        text-decoration: none;
-        color:white;
-    }
-    &:hover{
-        color: white;
-    }
+  }
+  &:hover {
+    color: white;
+  }
 }
+@media only screen and (max-width: 700px), (max-height: 550px) {
+  .tutorialModal {
+    .introImage {
+      min-width: 50px;
+      max-width: 50px;
+      margin: 25px;
 
+      img {
+        width: 60px;
+        height: 100px;
+        margin-bottom: 40px;
+      }
+    }
 
+    .introTextBox {
+      min-width: 65%;
+      max-width: 65%;
+    }
+
+    .introTextField {
+      font-size: 11px;
+    }
+  }
+  .GP-link-box {
+    width: 32px;
+    height: 32px;
+
+    .GP-link {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
