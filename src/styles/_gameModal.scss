@@ -6,39 +6,70 @@
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
-  
 
   .gameContainer {
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
+  }
+}
+.leftGameSide {
+  width: 30%;
+  padding: 10px;
+  height: 90%;
+}
 
-    .leftGameSide {
-      width: 30%;
-      padding: 10px;
-
-      .leftUpperBox {
-        height: 300px;
-        border: solid 2px brown;
-        margin-bottom: 10px;
-        border-radius: $averageBorderRadius;
-        overflow: overlay;
-        .tutorialBoxTextField {
-          padding: 5px;
-          user-select: none;
-          font: {
-            family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-              "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
-            weight: 500;
-          }
-        }
-      }
+.leftUpperBox {
+  height: 300px;
+  border: solid 2px brown;
+  margin-bottom: 10px;
+  border-radius: $averageBorderRadius;
+  overflow: overlay;
+  .tutorialBoxTextField {
+    padding: 5px;
+    user-select: none;
+    font: {
+      family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
+      weight: 500;
     }
-    .rightGameSide {
-      width: 68%;
-      border: solid 3px brown;
-      margin-top: 10px;
-      border-radius: $averageBorderRadius;
-      height: 410px;
+  }
+}
+
+// @media only screen and (min-width: 701px) {
+.rightGameSide {
+  width: 68%;
+  border: solid 3px brown;
+  margin-top: 10px;
+  border-radius: $averageBorderRadius;
+  height: 410px;
+}
+// }
+
+@media only screen and (max-width: 700px), (max-height: 550px) {
+  .rightGameSide {
+    width: 68%;
+    border: solid 3px brown;
+    margin-top: 10px;
+    border-radius: $averageBorderRadius;
+    height: 80%;
+  }
+
+  .leftUpperBox {
+    height: 60%;
+    border: solid 2px brown;
+    margin-bottom: 10px;
+    border-radius: $averageBorderRadius;
+    overflow: overlay;
+    .tutorialBoxTextField {
+      padding: 2px;
+      user-select: none;
+      font-size: 10px;
+      font: {
+        family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
+        weight: 200;
+      }
     }
   }
 }

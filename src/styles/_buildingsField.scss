@@ -1,7 +1,18 @@
-.buildings-field {
+  .buildings-field {
     width: 500px;
     display: flex;
     flex-wrap: wrap;
     padding-left: 4px;
     padding-top: 4px;
+  }
+
+  @media only screen and (max-width: 700px), (max-height: 550px) {
+  .buildings-field {
+    width: 99%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
 }

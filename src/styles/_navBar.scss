@@ -1,88 +1,120 @@
-.navBar {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 40px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: brown;
-  border-radius: $mainBorder;
-  padding: 5px 10px;
-  color: $thm-warmWhite;
-  border-bottom: 2px solid rgb(68, 47, 9);
-
-  span {
-    user-select: none;
-  }
-
-  .nav-bar-people-block {
-    width: 30%;
-    font-size: 14px;
+  .navBar {
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
+    height: 40px;
     justify-content: space-between;
-    margin-left: 10px;
-    .nav-bar-people {
-      width: 65px;
+    align-items: center;
+    background-color: brown;
+    border-radius: $mainBorder;
+    padding: 5px 10px;
+    color: $thm-warmWhite;
+    border-bottom: 2px solid rgb(68, 47, 9);
+
+    span {
+      user-select: none;
+    }
+
+    .nav-bar-people-block {
+      width: 30%;
+      font-size: 14px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-left: 10px;
+      .nav-bar-people {
+        width: 65px;
+
+        svg {
+          margin-right: 2px;
+        }
+      }
+    }
+
+    .nav-bar-time {
+      width: 26%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-content: center;
+    }
+
+    .nav-bar-resources-block {
+      width: 44%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-content: center;
+    }
+
+    .nav-bar-resources {
+      width: 75px;
+      font-size: 14px;
+      margin: auto;
 
       svg {
         margin-right: 2px;
+        margin-bottom: 2px;
+      }
+    }
+
+    .nav-bar-time-days {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      font-size: 12px;
+
+      width: 120px;
+      margin: auto;
+      background-color: burlywood;
+      border-radius: 5px;
+      border: 2px solid rgba(0, 0, 0, 0.548);
+      color: brown;
+
+
+
+      .nav-bar-time-days-number {
+        width: 50%;
+        font-style: italic;
+        text-align: right;
+        margin-top: auto;
+      }
+      .btn-set-timespeed {
+        font-size: 14px;
       }
     }
   }
-
-  .nav-bar-time {
-    width: 26%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-content: center;
+  .nav-bar-time-days-label {
+    font-weight: 600;
+    font-style: italic;
+    margin-top: auto;
   }
-
-  .nav-bar-resources-block {
-    width: 44%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  .nav-bar-resources {
-    width: 75px;
-    font-size: 14px;
+@media only screen and (max-width: 700px), (max-height: 550px) {
+  .nav-bar-time-days-label {
+    font-size: 10px;
+    font-weight: normal;
     margin: auto;
+  }
+  .navBar {
+    height: 35px;
+    padding: 0 5px;
 
-    svg {
-      margin-right: 2px;
-      margin-bottom: 2px;
+    .nav-bar-people-block {
+      width: 30%;
+      font-size: 12px;
+      margin-left: 2px;
+    }
+
+    .nav-bar-resources {
+      width: 75px;
+      font-size: 12px;
+      margin: auto;
+    }
+    
+
+    .btn-set-timespeed {
+      font-size: 10px;
     }
   }
 
-  .nav-bar-time-days {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    font-size: 12px;
-
-    width: 120px;
-    margin: auto;
-    background-color: burlywood;
-    border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.548);
-    color: brown;
-
-    .nav-bar-time-days-label {
-      font-weight: 600;
-      font-style: italic;
-      margin-top: auto;
-    }
-
-    .nav-bar-time-days-number {
-      width: 50%;
-      font-style: italic;
-      text-align: right;
-      margin-top: auto;
-
-    }
-  }
 }

@@ -55,7 +55,7 @@ export const NavBar = (props) => {
             defaultChecked
           />
           <label
-            className="btn btn-secondary mx-3"
+            className="btn btn-secondary mx-3 btn-set-timespeed"
             htmlFor="option1"
             data-delay-show="400"
             data-tip="Set to default time speed"
@@ -77,7 +77,7 @@ export const NavBar = (props) => {
             autoComplete="off"
           />
           <label
-            className="btn btn-secondary mx-3"
+            className="btn btn-secondary mx-3 btn-set-timespeed"
             htmlFor="option2"
             data-delay-show="400"
             data-tip="Set double time speed"
