@@ -2,6 +2,7 @@
   background-color: rgb(97, 71, 40);
   cursor: pointer;
   border-radius: 5px;
+  min-height: 80px;
   box-shadow: 2px 2px 2px 1px brown;
 }
 
@@ -10,8 +11,13 @@
 }
 
 .purchase-box span {
-    color: white;
-    font-size: 12px;
+  color: white;
+  font-size: 12px;
+}
+
+.purchase-title {
+  color: white;
+  font-size: 12px;
 }
 
 .errorMessage {
@@ -37,4 +43,16 @@
 ::-webkit-scrollbar-thumb {
   background: rgba(240, 162, 18, 0.671);
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 700px), (max-height: 550px) {
+  .purchase-title {
+    font-size: 10px;
+  }
+  .purchase-box span {
+    font-size: 10px;
+  }
+  .purchase-box {
+    min-height: 60px;
+  }
 }

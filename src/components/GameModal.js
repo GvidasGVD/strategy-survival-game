@@ -70,7 +70,9 @@ const ModalOverlay = (props) => {
 };
 
 const GameModal = (props) => {
-  const btnsClusterSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1em": "1.5em";
+  const btnsClusterSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1.2em": "1.5em";
+  const purchaseMainBuildingImgSize = window.innerWidth < 500 || window.innerHeight < 500 ? "2.0em": "3em";
+  const purchaseSmallerImgSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1.2em": "2.0em";
   const goldProvidedByHut = 10;
   const goldProvidedByHouse = goldProvidedByHut * 20;
   const lumberProvided = 5;
@@ -98,7 +100,7 @@ const GameModal = (props) => {
       priceInWood: 10,
       priceInStone: 0,
       priceInIron: 0,
-      icon1: <GiHut size="3.2em" />,
+      icon1: <GiHut size={purchaseMainBuildingImgSize} />,
       icon2: "",
       image: "",
       show: false,
@@ -119,7 +121,7 @@ const GameModal = (props) => {
       priceInStone: 200,
       priceInIron: 100,
       image: "",
-      icon1: <GiVikingLonghouse size="3.2em" />,
+      icon1: <GiVikingLonghouse size={purchaseMainBuildingImgSize} />,
       icon2: "",
       show: false,
       tooltip: "The Big House lets 200 people live in Your village",
@@ -139,8 +141,8 @@ const GameModal = (props) => {
       priceInStone: 200,
       priceInIron: 200,
       image: "",
-      icon1: <GiBarracksTent size="3.2em" />,
-      icon2: <GiSwordman size="2.2em" />,
+      icon1: <GiBarracksTent size={purchaseMainBuildingImgSize} />,
+      icon2: <GiSwordman size={purchaseSmallerImgSize} />,
       show: false,
       tooltip: "You will be able to train your villagers to become knights",
       level1text: "Train knights. Knight has 10 defense strength.",
@@ -157,8 +159,8 @@ const GameModal = (props) => {
       priceInStone: 600,
       priceInIron: 600,
       image: "",
-      icon1: <GiMedievalPavilion size="3.2em" />,
-      icon2: <GiBowman size="2.2em" />,
+      icon1: <GiMedievalPavilion size={purchaseMainBuildingImgSize} />,
+      icon2: <GiBowman size={purchaseSmallerImgSize} />,
       show: false,
       tooltip: "You will be able to train your villagers to become archers",
       level1text: "Train archers. Archer has 30 defense strength.",
@@ -175,8 +177,8 @@ const GameModal = (props) => {
       priceInStone: 0,
       priceInIron: 0,
       image: "",
-      icon1: <GiWoodCabin size="3.2em" color="rgb(227, 0, 0)" />,
-      icon2: <GiWoodAxe size="2.2em" />,
+      icon1: <GiWoodCabin size={purchaseMainBuildingImgSize} color="rgb(227, 0, 0)" />,
+      icon2: <GiWoodAxe size={purchaseSmallerImgSize} />,
       show: false,
       tooltip: "The Lumber Camp produces 5 wood every day",
       level1text: "Provides 5 lumber per day",
@@ -193,8 +195,8 @@ const GameModal = (props) => {
       priceInStone: 0,
       priceInIron: 0,
       image: "",
-      icon1: <GiWoodCabin size="3.2em" color="rgb(178 181 171)" />,
-      icon2: <GiMining size="2.2em" />,
+      icon1: <GiWoodCabin size={purchaseMainBuildingImgSize} color="rgb(178 181 171)" />,
+      icon2: <GiMining size={purchaseSmallerImgSize} />,
       show: false,
       tooltip: "The Stone Camp produces 5 stones per day",
       level1text: `Provides 5 stones per day`,
@@ -211,8 +213,8 @@ const GameModal = (props) => {
       priceInStone: 100,
       priceInIron: 0,
       image: "",
-      icon1: <GiWoodCabin size="3.2em" color="rgb(19, 139, 1)" />,
-      icon2: <GiMetalBar size="2.2em" />,
+      icon1: <GiWoodCabin size={purchaseMainBuildingImgSize} color="rgb(19, 139, 1)" />,
+      icon2: <GiMetalBar size={purchaseSmallerImgSize} />,
       show: false,
       tooltip: "The Metal Camp produces 5 Iron per day",
       level1text: "Provides 5 metal bars per day",
@@ -229,8 +231,8 @@ const GameModal = (props) => {
       priceInStone: 100,
       priceInIron: 100,
       image: "",
-      icon1: <GiMedievalGate size="3.2em" />,
-      icon2: <GiShoulderArmor size="2.2em" />,
+      icon1: <GiMedievalGate size={purchaseMainBuildingImgSize} />,
+      icon2: <GiShoulderArmor size={purchaseSmallerImgSize} />,
       show: false,
       tooltip: "The Armor forge is needed for Knights and Archers academies",
       level1text:
@@ -248,8 +250,8 @@ const GameModal = (props) => {
       priceInStone: 100,
       priceInIron: 100,
       image: "",
-      icon1: <GiEgyptianTemple size="3.2em" />,
-      icon2: <GiPointySword size="2.2em" />,
+      icon1: <GiEgyptianTemple size={purchaseMainBuildingImgSize} />,
+      icon2: <GiPointySword size={purchaseSmallerImgSize} />,
       show: false,
       tooltip: "The Swords forge is needed for Knights academy",
       level1text: "Needed for Knights Academy. Provides swords for knights.",
@@ -266,8 +268,8 @@ const GameModal = (props) => {
       priceInStone: 100,
       priceInIron: 100,
       image: "",
-      icon1: <GiTripleGate size="3.2em" />,
-      icon2: <GiPocketBow size="2.2em" />,
+      icon1: <GiTripleGate size={purchaseMainBuildingImgSize} />,
+      icon2: <GiPocketBow size={purchaseSmallerImgSize} />,
       show: false,
       tooltip: "The Arrows forge is needed for Archers academy",
       level1text:

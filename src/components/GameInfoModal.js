@@ -127,7 +127,7 @@ const ModalOverlay = (props) => {
       header: "Congratulations! You Won The Game!!!",
       text: "You proved that You have strong strategy skills!",
       secondText:
-        "I hope that You did enjoy the game and I welcome You to play it again :)",
+        "",
       icon: (
         <React.Fragment>
           <GiVikingLonghouse size="2.2em" className="mb-0" />

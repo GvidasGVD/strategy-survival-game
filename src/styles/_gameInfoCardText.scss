@@ -27,7 +27,7 @@
   }
 }
 
-.icon-float{
+.icon-float {
   position: absolute;
   animation-duration: 0.6s;
   animation-iteration-count: infinite;
@@ -40,7 +40,6 @@
 
   color: green;
   animation-name: icon_color_change__won-battle;
-
 }
 
 .icon-float__lost-battle {
@@ -63,11 +62,32 @@
 }
 
 @keyframes icon_color_change__won-battle {
-  from {color: green;}
-  to {color: yellow;}
+  from {
+    color: green;
+  }
+  to {
+    color: yellow;
+  }
 }
 
 @keyframes icon_color_change__lost-battle {
-  from {color: red;}
-  to {color: yellow;}
+  from {
+    color: red;
+  }
+  to {
+    color: yellow;
+  }
+}
+
+@media only screen and (max-width: 700px), (max-height: 550px) {
+  .game-info-card {
+    .game-info-card-header {
+      font-size: 20px;
+    }
+  }
+
+  .icon-float__lost-battle {
+    left: 37%;
+    top: 34%;
+  }
 }
