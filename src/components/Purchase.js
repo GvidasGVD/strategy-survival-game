@@ -19,7 +19,7 @@ const Purchase = (props) => {
           className="d-flex flex-wrap pt-2 px-2 pb-1 mx-3 my-2 purchase-box"
         >
           <ReactTooltip place="bottom" delayUpdate={1000} />
-          <div className="w-50 my-auto">
+          <div className="purchase-box__icon_title my-auto">
             <div className="d-flex flex-wrap w-100 justify-content-center mb-1">
               <span data-delay-show="100" data-tip={props.purchase.tooltip}>
                 {props.purchase.icon1}
@@ -38,7 +38,7 @@ const Purchase = (props) => {
               {props.purchase.text}
             </span>
           </div>
-          <div className="w-50 my-auto">
+          <div className="purchase-box__resources my-auto">
             <div className="d-flex justify-content-around text-center w-100">
               <span data-delay-show="400" data-tip="Villagers">
                 <GiRomanToga size="1.2em" /> {props.purchase.workersNeeded}

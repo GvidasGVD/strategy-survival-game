@@ -20,6 +20,16 @@
   font-size: 12px;
 }
 
+.purchase-box__icon_title {
+  width: 100%;
+  padding-top: 3px;
+}
+
+.purchase-box__resources {
+  width: 100%;
+  padding-bottom: 3px;
+}
+
 .errorMessage {
   font-size: 14px;
   background-color: rgba(240, 162, 18, 0.671);
@@ -59,5 +69,12 @@
 
   .errorMessage {
     font-size: 12px;
+  }
+
+  .purchase-box__icon_title,
+  .purchase-box__resources {
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
