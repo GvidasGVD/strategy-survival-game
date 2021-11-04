@@ -20,9 +20,12 @@ const BuildingUpgradeCard = (props) => {
   const [enoughResources, setEnoughResources] = useState(true);
   const [cannotDestroyHouse, setCannotDestroyHouse] = useState(false);
   const [canTrain, setCanTrain] = useState(true);
-  const buildingMainImgSize = window.innerWidth < 500 || window.innerHeight < 500 ? "2.0em": "3.2em";
-  const buildingSmallerImgSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1.5em": "2.2em";
-  const resourcesIconSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1em": "1.4em";
+  const buildingMainImgSize =
+    window.innerWidth < 500 || window.innerHeight < 500 ? "2.0em" : "3.2em";
+  const buildingSmallerImgSize =
+    window.innerWidth < 500 || window.innerHeight < 500 ? "1.5em" : "2.2em";
+  const resourcesIconSize =
+    window.innerWidth < 500 || window.innerHeight < 500 ? "1em" : "1.4em";
 
   const checkIfEnoughResources = (buildingId) => {
     return props.checkForResourcesToUpgrade(buildingId, 2);
@@ -137,9 +140,7 @@ const BuildingUpgradeCard = (props) => {
       : setIncrementorForPrice(3);
     setEnoughResources(true);
     setCannotDestroyHouse(false);
-    props.building.group === "factories"
-      ? setIsForge(true)
-      : setIsForge(false);
+    props.building.group === "factories" ? setIsForge(true) : setIsForge(false);
   }, [props.buildingArea, props.selectedBuildingType, props.building.group]);
 
   return (
@@ -182,8 +183,8 @@ const BuildingUpgradeCard = (props) => {
                     -
                   </button>
                   <div className="d-flex flex-wrap align-content-center justify-content-center train-warriors-number mx-1">
-                  {number}
-                </div>
+                    {number}
+                  </div>
                   <button
                     className="btn btn-dark btn-xs my-2"
                     onClick={increaseNr}
@@ -197,13 +198,16 @@ const BuildingUpgradeCard = (props) => {
                     max
                   </button>
                 </div>
-
               </div>
 
               <div className="d-flex flex-wrap justify-content-center">
                 <span className="text-center total-cost-text">Total: </span>
                 <span data-delay-show="400" data-tip="Iron">
-                  <GiMetalBar size={resourcesIconSize} color="white" className="mx-2" />
+                  <GiMetalBar
+                    size={resourcesIconSize}
+                    color="white"
+                    className="mx-2"
+                  />
                   {number * incrementorForPrice}{" "}
                 </span>{" "}
                 <span className="ml-4" data-delay-show="400" data-tip="Gold">
@@ -228,15 +232,19 @@ const BuildingUpgradeCard = (props) => {
 
           {displayUpgradeBtn && (
             <div className="d-flex mb-auto justify-content-center flex-wrap w-100">
-              <div className="w-100 text-center mb-2">
-                <ImagesOfBuildings
-                  buildingId={props.selectedBuildingType}
-                  biggerImageSize={buildingMainImgSize}
-                  smallerImageSize={buildingSmallerImgSize}
-                />
-                <p className="building-info-text">
-                  {props.selectedBuildingText}
-                </p>
+              <div className="d-flex flex-wrap text-center justify-content-center mb-2 w-100">
+                <div className="building-card__building-info-image my-auto">
+                  <ImagesOfBuildings
+                    buildingId={props.selectedBuildingType}
+                    biggerImageSize={buildingMainImgSize}
+                    smallerImageSize={buildingSmallerImgSize}
+                  />
+                </div>
+                <div className="building-card__building-info-text">
+                  <p className="building-info-text">
+                    {props.selectedBuildingText}
+                  </p>
+                </div>
               </div>
               {props.selectedBuildingGroup !== "factories" ? (
                 <span className="building-level-text w-100 text-center mx-5 mb-1">
@@ -309,7 +317,10 @@ const BuildingUpgradeCard = (props) => {
           >
             Destroy Building
           </button>
-          <button className="btn btn-dark btn-sm m-1 close-btn" onClick={closeModal}>
+          <button
+            className="btn btn-dark btn-sm m-1 close-btn"
+            onClick={closeModal}
+          >
             Close
           </button>
         </div>

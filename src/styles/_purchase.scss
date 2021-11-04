@@ -21,6 +21,7 @@
 }
 
 .errorMessage {
+  font-size: 14px;
   background-color: rgba(240, 162, 18, 0.671);
   padding: 5px;
   text-align: center;
@@ -54,5 +55,9 @@
   }
   .purchase-box {
     min-height: 60px;
+  }
+
+  .errorMessage {
+    font-size: 12px;
   }
 }
