@@ -34,7 +34,7 @@ const TutorialBox = (props) => {
     },
     {
       text: "The game success depends only on You! Believe in Yourself and never give up!",
-      image: <WiSunrise size="3em" color="grey" />,
+      image: <WiSunrise size={iconSize} color="grey" />,
     },
   ];
   const [state, setState] = useState(() => 0);
@@ -74,13 +74,13 @@ const TutorialBox = (props) => {
       </div>
       <div className="tutorialBoxTextNav d-flex w-100 justify-content-end align-items-end">
         <button
-          className="introBtnPrevious btn btn-dark btn-sm mr-2 p-2"
+          className="introBtnPrevious tutorial-intro-btn-previous btn btn-dark btn-sm"
           onClick={() => toggleTutorialText(-1)}
         >
           &laquo;
         </button>
         <button
-          className="introBtnNext btn btn-dark btn-sm mr-3 p-2"
+          className="introBtnPrevious tutorial-intro-btn-next btn btn-dark btn-sm"
           onClick={() => toggleTutorialText(+1)}
         >
           &raquo;

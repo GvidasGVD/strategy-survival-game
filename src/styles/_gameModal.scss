@@ -18,9 +18,9 @@
   z-index: 1;
 }
 
-.exit-game-btn-box {
+.exit-game-btn-box button {
   z-index: 2;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 .leftGameSide {
   width: 30%;
@@ -63,8 +63,8 @@
       height: 90%;
     }
   }
-  .exit-game-btn-box {
-    padding-top: 10px;
+  .exit-game-btn-box button{
+    margin-top: 10px;
   }
   .rightGameSide {
     width: 68%;

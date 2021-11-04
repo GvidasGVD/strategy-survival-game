@@ -23,7 +23,7 @@ const IntroPage = ({ playersName, onGotIt }) => {
       setExistanceNextText(false);
       return;
     }
-    if(state + val === 0) {
+    if (state + val === 0) {
       setExistancePrevText(false);
       setShowPreviousBtn(false);
       setShowNextBtn(true);
@@ -33,7 +33,7 @@ const IntroPage = ({ playersName, onGotIt }) => {
       setShowNextBtn(true);
     }
 
-    if(state + val === 2) {
+    if (state + val === 2) {
       setExistanceNextText(false);
       setShowPreviousBtn(true);
       setShowNextBtn(false);
@@ -53,7 +53,10 @@ const IntroPage = ({ playersName, onGotIt }) => {
   return (
     <div className="containerModal tutorialModal">
       <div className="introImage">
-        <img src="https://gvidasgvd.github.io/strategy-survival-game/images/introPersonImg.PNG" alt="Ancient person drawing" />
+        <img
+          src="https://gvidasgvd.github.io/strategy-survival-game/images/introPersonImg.PNG"
+          alt="Ancient person drawing"
+        />
         {/* <img alt="Ancient person drawing" /> */}
       </div>
       <div className="introTextBox d-flex justify-content-end align-content-between flex-wrap p-4">
@@ -67,74 +70,96 @@ const IntroPage = ({ playersName, onGotIt }) => {
                   href="https://www.linkedin.com/feed/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  
                 >
-                  <FaLinkedin size="3.2em" color="blue" className="linkedin-link"/>
+                  <FaLinkedin
+                    size="3.2em"
+                    color="blue"
+                    className="linkedin-link"
+                  />
                 </a>
-                <p className="mt-3 white-text">You can find my other works here: </p>
-                <div className="GP-link-box"><a href="https://gvidasgvd.github.io/portfolioPage.github.io/" target="_blank" rel="noopener noreferrer" className="GP-link">GP</a></div>
+                <div className="d-flex flex-nowrap mt-3 white-text align-items-center">
+                  <p className='other-works-text my-auto'>You can find my other works here:</p>
+                  <div className="GP-link-box ml-3">
+                    <a
+                      href="https://gvidasgvd.github.io/portfolioPage.github.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="GP-link"
+                    >
+                      GP
+                    </a>
+                  </div>{" "}
+                </div>
               </div>
             ) : null}
             {state === 2 ? (
               <div className="d-flex flex-wrap">
-
-                <p className="mt-3 white-text w-100">Links: </p><br></br>
+                <p className="mt-3 white-text w-100">Links: </p>
+                <br></br>
                 <a
-                className="icons-links"
+                  className="icons-links"
                   href="https://react-icons.github.io/react-icons/"
                   target="_blank"
                   rel="noopener noreferrer"
-                >https://react-icons.github.io/react-icons/
+                >
+                  https://react-icons.github.io/react-icons/
                 </a>
                 <a
-                className="icons-links"
+                  className="icons-links"
                   href="https://game-icons.net/"
                   target="_blank"
                   rel="noopener noreferrer"
-                >https://game-icons.net/
+                >
+                  https://game-icons.net/
                 </a>
                 <a
-                className="icons-links"
+                  className="icons-links"
                   href="https://github.com/atisawd/boxicons"
                   target="_blank"
                   rel="noopener noreferrer"
-                >https://github.com/atisawd/boxicons
+                >
+                  https://github.com/atisawd/boxicons
                 </a>
                 <a
-                className="icons-links"
+                  className="icons-links"
                   href="https://fontawesome.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                >https://fontawesome.com/
+                >
+                  https://fontawesome.com/
                 </a>
                 <a
-                className="icons-links"
+                  className="icons-links"
                   href="https://erikflowers.github.io/weather-icons/"
                   target="_blank"
                   rel="noopener noreferrer"
-                >https://erikflowers.github.io/weather-icons/
+                >
+                  https://erikflowers.github.io/weather-icons/
                 </a>
-                
               </div>
             ) : null}
           </div>
         </div>
         <div className="mt-auto">
-          {showPreviousBtn && <button
-            className="introBtnPrevious btn btn-dark btn-sm mr-1"
-            onClick={() => toggleIntroText(-1)}
-            disabled={!existsPreviousText}
-          >
-            Previous
-          </button>}
-          {showNextBtn && <button
-            className="introBtnNext btn btn-dark btn-sm mx-1"
-            onClick={() => toggleIntroText(+1)}
-            disabled={!existsNextText}
-          >
-            Next
-          </button>}
-          
+          {showPreviousBtn && (
+            <button
+              className="introBtnPrevious btn btn-dark mr-1"
+              onClick={() => toggleIntroText(-1)}
+              disabled={!existsPreviousText}
+            >
+              Previous
+            </button>
+          )}
+          {showNextBtn && (
+            <button
+              className="introBtnNext btn btn-dark mx-1"
+              onClick={() => toggleIntroText(+1)}
+              disabled={!existsNextText}
+            >
+              Next
+            </button>
+          )}
+
           <button className="btn btn-dark btn-sm ml-1 mt-0" onClick={onGotIt}>
             {" "}
             Got it!{" "}

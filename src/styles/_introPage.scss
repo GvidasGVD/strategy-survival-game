@@ -12,7 +12,7 @@
   background: grey
     url("https://gvidasgvd.github.io/strategy-survival-game/images/introBckImg.JPG")
     no-repeat;
-  background-size: cover;
+  background-size: 100%;
   color: $thm-warmWhite;
   display: flex;
   flex-wrap: wrap;
@@ -68,10 +68,15 @@
   justify-content: center;
   align-items: center;
 
+  &:hover {
+    background-color: rgb(44, 44, 44);
+  }
+
   .GP-link {
     color: bisque;
     font-size: 24px;
     font-weight: 600;
+
 
     &:link {
       text-decoration: none;
@@ -82,7 +87,7 @@
     }
     &:hover {
       text-decoration: none;
-      color: rgb(255, 220, 23);
+      color: rgb(247, 218, 54);
     }
   }
 }
@@ -102,6 +107,10 @@
   &:hover {
     color: white;
   }
+}
+
+.other-works-text{
+  font-size: 14px;
 }
 @media only screen and (max-width: 700px), (max-height: 550px) {
   .tutorialModal {
@@ -139,5 +148,8 @@
       font-size: 18px;
       font-weight: 600;
     }
+  }
+  .other-works-text{
+    font-size: 12px;
   }
 }

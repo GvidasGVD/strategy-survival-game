@@ -70,6 +70,7 @@ const ModalOverlay = (props) => {
 };
 
 const GameModal = (props) => {
+  const btnsClusterSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1em": "1.5em";
   const goldProvidedByHut = 10;
   const goldProvidedByHouse = goldProvidedByHut * 20;
   const lumberProvided = 5;
@@ -1326,42 +1327,45 @@ const GameModal = (props) => {
             />
           )}
           <div className="btnsCluster">
-            <div className="d-flex flex-wrap">
+            <div className="d-flex flex-wrap justify-content-center w-100">
+              <div className="d-flex flex-nowrap justify-content-around w-100">
               <button
                 className="btn btn-dark btn-sm m-1"
                 disabled={!isFieldSelected || hasBuilding}
                 onClick={() => setPurchasegroup("resources")}
               >
-                <GiAxeInStump size="1.5em" />
+                <GiAxeInStump size={btnsClusterSize} />
               </button>
               <button
                 className="btn btn-dark btn-sm m-1"
                 disabled={!isFieldSelected || hasBuilding}
                 onClick={() => setPurchasegroup("villageBuildings")}
               >
-                <GiHouse size="1.5em" />
+                <GiHouse size={btnsClusterSize} />
               </button>
               <button
                 className="btn btn-dark btn-sm m-1"
                 disabled={!isFieldSelected || hasBuilding}
                 onClick={() => setPurchasegroup("warBuildings")}
               >
-                <GiSwordsEmblem size="1.5em" />
+                <GiSwordsEmblem size={btnsClusterSize} />
               </button>
               <button
                 className="btn btn-dark btn-sm m-1"
                 disabled={!isFieldSelected || hasBuilding}
                 onClick={() => setPurchasegroup("factories")}
               >
-                <GiFactory size="1.5em" />
+                <GiFactory size={btnsClusterSize} />
               </button>
+              </div>
+              <div className="d-flex flex-nowrap justify-content-around w-100">
               <button
                 className="btn btn-dark btn-sm m-1"
                 data-delay-show="400"
                 data-tip="Any enemies nearby?"
                 onClick={() => handleGameInfoTypeSelection(1)}
               >
-                <GiCrossedSwords size="1.5em" />
+                <GiCrossedSwords size={btnsClusterSize} />
               </button>
               <button
                 className="btn btn-dark btn-sm m-1"
@@ -1369,7 +1373,7 @@ const GameModal = (props) => {
                 data-tip="Your game status"
                 onClick={() => handleGameInfoTypeSelection(2)}
               >
-                <FaTrophy size="1.5em" />
+                <FaTrophy size={btnsClusterSize} />
               </button>
               <button
                 className="btn btn-dark btn-sm m-1"
@@ -1377,7 +1381,7 @@ const GameModal = (props) => {
                 data-tip="Settings"
                 onClick={() => handleGameInfoTypeSelection(4)}
               >
-                <FaWhmcs size="1.5em" />
+                <FaWhmcs size={btnsClusterSize} />
               </button>
               <button
                 className="btn btn-dark btn-sm m-1"
@@ -1385,8 +1389,9 @@ const GameModal = (props) => {
                 data-tip="Your Stats"
                 onClick={() => handleGameInfoTypeSelection(3)}
               >
-                <BiStats size="1.5em" />
+                <BiStats size={btnsClusterSize} />
               </button>
+              </div>
             </div>
             <div className="d-flex justify-content-center align-content-end exit-game-btn-box">
               <button
