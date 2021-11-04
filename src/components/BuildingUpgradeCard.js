@@ -20,6 +20,9 @@ const BuildingUpgradeCard = (props) => {
   const [enoughResources, setEnoughResources] = useState(true);
   const [cannotDestroyHouse, setCannotDestroyHouse] = useState(false);
   const [canTrain, setCanTrain] = useState(true);
+  const buildingMainImgSize = window.innerWidth < 500 || window.innerHeight < 500 ? "2.0em": "3.2em";
+  const buildingSmallerImgSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1.5em": "2.2em";
+  const resourcesIconSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1em": "1.4em";
 
   const checkIfEnoughResources = (buildingId) => {
     return props.checkForResourcesToUpgrade(buildingId, 2);
@@ -112,14 +115,14 @@ const BuildingUpgradeCard = (props) => {
     }
   };
 
-  let warriorImage = <GiSwordman size="3.2em" />;
+  let warriorImage = <GiSwordman size={buildingMainImgSize} />;
   let toolTipWarriorStrength = "Warrior strength: 10";
   let errorMessage = "Check if You have built Armor & Swords Forges";
 
   if (props.selectedBuildingType === 3 || props.selectedBuildingType === 4) {
     displayUpgradeBtn = false;
     if (props.selectedBuildingType === 4) {
-      warriorImage = <GiBowman size="3.2em" />;
+      warriorImage = <GiBowman size={buildingMainImgSize} />;
       toolTipWarriorStrength = "Warrior strength: 30";
       errorMessage = "Check if You have built Armor & Arrows Forges";
     }
@@ -147,15 +150,15 @@ const BuildingUpgradeCard = (props) => {
           <span className="building-title">{props.buildingTitle}</span>
           {!displayUpgradeBtn && (
             <div className="d-flex flex-wrap w-100 justify-content-center mb-auto">
-              <p className="mb-3">
+              <p className="mb-2">
                 Cost:{" "}
                 <span data-delay-show="400" data-tip="Iron">
-                  <GiMetalBar size="1.4em" color="white" />{" "}
+                  <GiMetalBar size={resourcesIconSize} color="white" />{" "}
                   {incrementorForPrice}{" "}
                 </span>
                 <span data-delay-show="400" data-tip="Gold">
                   <GiTwoCoins
-                    size="1.4em"
+                    size={resourcesIconSize}
                     className="ml-3 mr-1"
                     color="yellow"
                   />
@@ -169,7 +172,7 @@ const BuildingUpgradeCard = (props) => {
               >
                 {warriorImage}
               </span>
-              <div className="d-flex flex-nowrap w-100 justify-content-center my-2">
+              <div className="d-flex flex-nowrap w-100 justify-content-center my-1">
                 <div className="d-flex flex-nowrap align-content-center text-right">
                   {" "}
                   <button
@@ -198,18 +201,18 @@ const BuildingUpgradeCard = (props) => {
               </div>
 
               <div className="d-flex flex-wrap justify-content-center">
-                <span className="w-100 text-center">Total Cost: </span>
+                <span className="text-center total-cost-text">Total: </span>
                 <span data-delay-show="400" data-tip="Iron">
-                  <GiMetalBar size="1.4em" color="white" className="mx-2" />
+                  <GiMetalBar size={resourcesIconSize} color="white" className="mx-2" />
                   {number * incrementorForPrice}{" "}
                 </span>{" "}
                 <span className="ml-4" data-delay-show="400" data-tip="Gold">
-                  <GiTwoCoins size="1.4em" color="yellow" />{" "}
+                  <GiTwoCoins size={resourcesIconSize} color="yellow" />{" "}
                   {number * incrementorForPrice * 100}{" "}
                 </span>
               </div>
               <button
-                className="btn btn-success btn-sm my-1 w-75"
+                className="btn btn-success btn-sm my-1 w-75 train-btn"
                 disabled={number === 0}
                 onClick={trainWarriors}
               >
@@ -228,8 +231,8 @@ const BuildingUpgradeCard = (props) => {
               <div className="w-100 text-center mb-2">
                 <ImagesOfBuildings
                   buildingId={props.selectedBuildingType}
-                  biggerImageSize={"3.2em"}
-                  smallerImageSize={"2.2em"}
+                  biggerImageSize={buildingMainImgSize}
+                  smallerImageSize={buildingSmallerImgSize}
                 />
                 <p className="building-info-text">
                   {props.selectedBuildingText}
@@ -277,7 +280,7 @@ const BuildingUpgradeCard = (props) => {
                 </div>
 
                 <button
-                  className="btn btn-success btn-sm m-2 py-0 px-3"
+                  className="btn btn-success btn-sm m-2 py-0 px-3 upgrade-btn"
                   onClick={upgradeBuilding}
                   data-delay-show="400"
                   data-tip="Double the production"
@@ -299,14 +302,14 @@ const BuildingUpgradeCard = (props) => {
 
         <div className="d-flex justify-content-center mt-auto flex-wrap">
           <button
-            className="btn btn-warning btn-sm m-1"
+            className="btn btn-warning btn-sm m-1 destroy-building-btn"
             onClick={destroyBuidling}
             data-delay-show="100"
             data-tip="You will receive the half of the cost of 1st level building"
           >
             Destroy Building
           </button>
-          <button className="btn btn-dark btn-sm m-1" onClick={closeModal}>
+          <button className="btn btn-dark btn-sm m-1 close-btn" onClick={closeModal}>
             Close
           </button>
         </div>

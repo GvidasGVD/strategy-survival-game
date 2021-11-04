@@ -83,7 +83,7 @@ const PurchaseMenuBox = (props) => {
 
       <div className="tutorialBoxTextNav d-flex w-100 justify-content-end align-items-end">
         <button
-          className="introBtnPrevious btn btn-dark btn-sm mr-3"
+          className="introBtnPrevious btn btn-dark btn-sm mr-3 px-3 py-0"
           onClick={closePurchaseBox}
         >
           Close

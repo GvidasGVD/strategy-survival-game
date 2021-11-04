@@ -109,7 +109,7 @@ const ModalOverlay = (props) => {
       type: "playersStats",
       header: "Game statistics",
       text: "",
-      secondText: `Battles Won: ${props.battlesWon}`,
+      secondText: `Won Battles: ${props.battlesWon}`,
       thirdText: `Defense Strength: ${defenseStrength}`,
       icon: "",
     },

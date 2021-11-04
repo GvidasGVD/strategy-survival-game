@@ -1,5 +1,5 @@
 .left-upper-container {
-    height: 300px;
+    height: 310px;
     border: solid 2px brown;
     margin-bottom: 10px;
     border-radius: $averageBorderRadius;
@@ -15,6 +15,7 @@
 
 .building-title {
     font-weight: 600;
+    font-size: 14px;
     color: rgb(248, 242, 242);
     background-color: rgba(43, 25, 3, 0.699);
     border-top-left-radius: 5px;
@@ -64,6 +65,7 @@
     box-shadow: 2px 2px 3px 1px brown;
 
     span {
+        font-size: 12px;
         display: flex;
         align-items: center;
         color: white;
@@ -71,8 +73,70 @@
     }
 }
 
+.upgrade-btn,
+.destroy-building-btn,
+.close-btn,
+.train-btn{
+    font-size: 12px;
+}
+
+.total-cost-text {
+    width: 100%;
+    font-size: 14px;
+}
+
+
 @media only screen and (max-width: 700px), (max-height: 550px) {
     .left-upper-container {
         height: 60%;
     }
+
+    .building-title {
+        font-size:12px;
+        font-weight: 200;
+    }
+    .building-info-text {
+        font-size: 10px;
+        margin: 2px;
+    }
+    .building-level-text {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .upgrade-building-box {
+        background-color: rgb(105, 50, 19);
+        margin: 0 5px;
+        border-radius: 5px;
+        padding: 2px;
+        box-shadow: 2px 2px 3px 1px brown;
+    
+        span {
+            font-size: 10px;
+        }
+    }
+
+    .upgrade-btn,
+    .destroy-building-btn,
+    .close-btn,
+    .train-btn{
+        font-size: 10px;
+    }
+
+    .train-btn {
+        padding: 0 10px;
+    }
+
+    .building-card{
+        min-height: 80px;
+    }
+
+    .total-cost-text {
+        width: auto;
+        font-size: 12px;
+    }
+
+    .train-warriors-number {
+        font-size: 14px;
+    }
+    
 }
