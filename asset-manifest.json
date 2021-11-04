@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/strategy-survival-game/static/css/main.20b9eac9.chunk.css",
-    "main.js": "/strategy-survival-game/static/js/main.26f614eb.chunk.js",
-    "main.js.map": "/strategy-survival-game/static/js/main.26f614eb.chunk.js.map",
+    "main.css": "/strategy-survival-game/static/css/main.77f4d5a1.chunk.css",
+    "main.js": "/strategy-survival-game/static/js/main.6a3031fd.chunk.js",
+    "main.js.map": "/strategy-survival-game/static/js/main.6a3031fd.chunk.js.map",
     "runtime-main.js": "/strategy-survival-game/static/js/runtime-main.e9d04d21.js",
     "runtime-main.js.map": "/strategy-survival-game/static/js/runtime-main.e9d04d21.js.map",
     "static/js/2.8dedc9a7.chunk.js": "/strategy-survival-game/static/js/2.8dedc9a7.chunk.js",
     "static/js/2.8dedc9a7.chunk.js.map": "/strategy-survival-game/static/js/2.8dedc9a7.chunk.js.map",
     "index.html": "/strategy-survival-game/index.html",
-    "static/css/main.20b9eac9.chunk.css.map": "/strategy-survival-game/static/css/main.20b9eac9.chunk.css.map",
+    "static/css/main.77f4d5a1.chunk.css.map": "/strategy-survival-game/static/css/main.77f4d5a1.chunk.css.map",
     "static/js/2.8dedc9a7.chunk.js.LICENSE.txt": "/strategy-survival-game/static/js/2.8dedc9a7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e9d04d21.js",
     "static/js/2.8dedc9a7.chunk.js",
-    "static/css/main.20b9eac9.chunk.css",
-    "static/js/main.26f614eb.chunk.js"
+    "static/css/main.77f4d5a1.chunk.css",
+    "static/js/main.6a3031fd.chunk.js"
   ]
 }
