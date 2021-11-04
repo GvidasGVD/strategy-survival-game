@@ -6,10 +6,10 @@ import { WiSunrise } from "react-icons/wi";
 
 
 const TutorialBox = (props) => {
-  const iconSize = "2.5em";
+  const iconSize = window.innerWidth < 500 || window.innerHeight < 500 ? "1.4em": "2.5em";
   const tutorialBoxTexts = [
     {
-      text: "Please be aware that any time enemies can attack You! Train Your village people to become strong Knights and Archers. You can check for any nearby enemies by clicking: ",
+      text: "Be aware that any time enemies can attack You! You can check for any nearby enemies by clicking: ",
       image: <GiCrossedSwords size={iconSize} color="grey" />,
     },
     {
@@ -17,7 +17,7 @@ const TutorialBox = (props) => {
       image: <FaTrophy size={iconSize} color="grey" />,
     },
     {
-      text: "If Enemy is stronger than You more than twice, You will be defeated! So make sure that your defense strength is not less then the half of the Enemy's attack strength",
+      text: "If Enemy is stronger than You more than twice, You will be defeated!",
       image: <GiBrokenShield size={iconSize} color="grey" />,
     },
     {
